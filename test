@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+# encoding: utf-8
+
+$:.push("./lib")
+require "jpegoptim"
+
+puts Jpegoptim.available?.inspect
+puts Jpegoptim.optimize(["foo.jpg", "bar.jpg", "empty.jpg"], { :preserve => true, :strip => :all, :debug => true })
