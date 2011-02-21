@@ -7,7 +7,7 @@ require "unix/whereis"
 
 ##
 # The +jpegoptim+ tool command frontend.
-# @see
+# @see http://www.kokkonen.net/tjko/projects.html
 #
 
 module Jpegoptim
