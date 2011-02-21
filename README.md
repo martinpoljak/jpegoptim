@@ -1,7 +1,7 @@
 Jpegoptim
 =========
 
-**Jpegoptim** provides Ruby interface to the `jpegoptim` tool. 
+**Jpegoptim** provides Ruby interface to the [`jpegoptim`][1] tool. 
 Some examples follow: (for details, see module documentation)
 
     require "jpegoptim"
@@ -57,5 +57,6 @@ Copyright
 Copyright &copy; 2011 [Martin Kozák][3]. See `LICENSE.txt` for
 further details.
 
+[1]: http://www.kokkonen.net/tjko/projects.html
 [2]: http://github.com/martinkozak/qrpc/issues
 [3]: http://www.martinkozak.net/
