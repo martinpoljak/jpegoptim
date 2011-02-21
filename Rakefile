@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "jpegoptim"
   gem.homepage = "https://github.com/martinkozak/jpegoptim"
   gem.license = "MIT"
-  gem.summary = "Ruby interface to UNIX 'jpegoptim' command."
+  gem.summary = "Ruby interface to 'jpegoptim' tool."
   gem.email = "martinkozak@martinkozak.net"
   gem.authors = ["Martin Kozák"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,

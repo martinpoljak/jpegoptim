@@ -6,9 +6,7 @@ Some examples follow: (for details, see module documentation)
 
     require "jpegoptim"
     
-    Jpegoptim.available?
-    
-    # will return true (or false)
+    Jpegoptim.available?    # will return true (or false)
     
     Jpegoptim.optimize(["foo.jpg", "empty.jpg", "nonexist.jpg"], { :preserve => true, :strip => :all })
     
