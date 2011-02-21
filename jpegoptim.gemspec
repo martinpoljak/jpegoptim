@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Martin Kozák"]
-  s.date = %q{2011-02-18}
+  s.date = %q{2011-02-21}
   s.email = %q{martinkozak@martinkozak.net}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -18,10 +18,12 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
     "Rakefile",
     "VERSION",
+    "jpegoptim.gemspec",
     "lib/jpegoptim.rb",
     "test"
   ]
@@ -29,7 +31,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.5.2}
-  s.summary = %q{Ruby interface to UNIX 'jpegoptim' command.}
+  s.summary = %q{Ruby interface to 'jpegoptim' tool.}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
