@@ -10,9 +10,12 @@ Some examples follow: (for details, see module documentation)
     
     Jpegoptim.optimize(["foo.jpg", "empty.jpg", "nonexist.jpg"], { :preserve => true, :strip => :all })
     
-    # will run 'jpegoptim --strip-all --preserve foo.jpg bar.jpgug empty.jpg'
+    # will run 'jpegoptim --strip-all --preserve foo.jpg bar.jpg empty.jpg'
     # and then will return for example: 
     #   '#<struct Jpegoptim::Result succeed={"foo.jpg => -22.1}}, errors=[["empty.jpg", "ERROR"]]>
+    
+It can be also run asynchronously by non-blocking way (with [`eventmachine`][4]) 
+simply by giving block with one argument to `#optimize`. See documentation. 
     
 ### Call Result
 
@@ -60,3 +63,4 @@ further details.
 [1]: http://www.kokkonen.net/tjko/projects.html
 [2]: http://github.com/martinkozak/qrpc/issues
 [3]: http://www.martinkozak.net/
+[4]: http://rubyeventmachine.com/
