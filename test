@@ -3,6 +3,13 @@
 
 $:.push("./lib")
 require "jpegoptim"
+require "em-pipe-run"
 
-puts Jpegoptim.available?.inspect
-puts Jpegoptim.optimize(["foo.jpg", "bar.jpg", "empty.jpg"], { :preserve => true, :strip => :all, :debug => true })
+EM::run do
+    puts Jpegoptim.available?.inspect
+    Jpegoptim.optimize(["x.jpg"], { :preserve => true, :strip => :all, :debug => true }) do |results|
+        puts results.inspect
+    end
+    
+    puts "something"
+end
