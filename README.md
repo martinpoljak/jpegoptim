@@ -61,6 +61,6 @@ Copyright &copy; 2011 [Martin Kozák][3]. See `LICENSE.txt` for
 further details.
 
 [1]: http://www.kokkonen.net/tjko/projects.html
-[2]: http://github.com/martinkozak/qrpc/issues
+[2]: http://github.com/martinkozak/jpegoptim/issues
 [3]: http://www.martinkozak.net/
 [4]: http://rubyeventmachine.com/
