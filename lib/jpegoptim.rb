@@ -2,7 +2,6 @@
 # (c) 2011 Martin Kozák (martinkozak@martinkozak.net)
 
 require "command-builder"
-require "pipe-run"
 require "unix/whereis"
 
 ##
@@ -116,11 +115,9 @@ module Jpegoptim
             STDERR.write cmd.to_s + "\n"
         end
             
-            cmd = cmd.to_s
-            
             # Blocking
             if block.nil?
-                output = Pipe.run(cmd)
+                output = cmd.execute!
 
                 # Parses output
                 succeed, errors = __parse_output(output)
@@ -128,7 +125,7 @@ module Jpegoptim
                 
             # Non-blocking
             else
-                Pipe.run(cmd) do |output|
+                cmd.execute do |output|
                     succeed, errors = __parse_output(output)
                     block.call(self::Result::new(succeed, errors))
                 end
