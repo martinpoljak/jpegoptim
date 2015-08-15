@@ -4,15 +4,21 @@ Jpegoptim
 **Jpegoptim** provides Ruby interface to the [`jpegoptim`][1] tool. 
 Some examples follow: (for details, see module documentation)
 
-    require "jpegoptim"
-    
-    Jpegoptim.available?    # will return true (or false)
-    
-    Jpegoptim.optimize(["foo.jpg", "empty.jpg", "nonexist.jpg"], { :preserve => true, :strip => :all })
-    
-    # will run 'jpegoptim --strip-all --preserve foo.jpg bar.jpg empty.jpg'
-    # and then will return for example: 
-    #   '#<struct Jpegoptim::Result succeed={"foo.jpg => -22.1}}, errors=[["empty.jpg", "ERROR"]]>
+```ruby
+require "jpegoptim"
+
+Jpegoptim.available?    # will return true (or false)
+
+files = ["foo.jpg", "empty.jpg", "nonexist.jpg"]
+options = { :preserve => true, :strip => :all }
+
+Jpegoptim.optimize(files, options)
+
+# will run 'jpegoptim --strip-all --preserve foo.jpg bar.jpg empty.jpg'
+# and then will return for example: 
+#   '#<struct Jpegoptim::Result succeed={"foo.jpg => -22.1}},
+#   errors=[["empty.jpg", "ERROR"]]>'
+```
     
 It can be also run asynchronously by non-blocking way (with [`eventmachine`][4]) 
 simply by giving block with one argument to `#optimize`. See documentation. 
@@ -41,26 +47,13 @@ Destination directory option isn't supported, so you are purely
 responsible for optimizing files on the right place. Use Ruby methods 
 for it.
 
-
-    
-    
-Contributing
-------------
-
-1. Fork it.
-2. Create a branch (`git checkout -b 20101220-my-change`).
-3. Commit your changes (`git commit -am "Added something"`).
-4. Push to the branch (`git push origin 20101220-my-change`).
-5. Create an [Issue][2] with a link to your branch.
-6. Enjoy a refreshing Diet Coke and wait.
-
 Copyright
 ---------
 
-Copyright &copy; 2011 [Martin Kozák][3]. See `LICENSE.txt` for
+Copyright &copy; 2011 &ndash; 2015 [Martin Poljak][3]. See `LICENSE.txt` for
 further details.
 
 [1]: http://www.kokkonen.net/tjko/projects.html
 [2]: http://github.com/martinkozak/jpegoptim/issues
-[3]: http://www.martinkozak.net/
+[3]: http://www.martinpoljak.net/
 [4]: http://rubyeventmachine.com/
